@@ -1,0 +1,19 @@
+name: DiscordLinker
+version: '${project.version}'
+main: com.mcdc.discordlinker.DiscordLinker
+api-version: '1.19'
+authors: [TraeAI]
+description: Discord hesap eşleme eklentisi
+commands:
+  esle:
+    description: Discord hesabınızı Minecraft hesabınızla eşlemek için kullanılır
+    usage: /esle
+    aliases: [link, discord]
+  esleadmin:
+    description: Admin komutları
+    usage: /esleadmin <reload|list>
+    permission: discordlinker.admin
+permissions:
+  discordlinker.admin:
+    description: Admin komutlarına erişim sağlar
+    default: op

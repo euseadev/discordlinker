@@ -1,0 +1,43 @@
+# DiscordLinker Konfigürasyon Dosyası
+
+# Discord Bot Ayarları
+discord:
+  # Discord Bot Token'ı (https://discord.com/developers/applications adresinden alabilirsiniz)
+  token: "BOT_TOKEN_BURAYA"
+  # Discord Sunucu ID'si
+  guild-id: "SUNUCU_ID_BURAYA"
+  # Hesap eşleme kanalı ID'si
+  link-channel-id: "KANAL_ID_BURAYA"
+  # Hesap eşleme mesajı ID'si (bot tarafından otomatik doldurulacak)
+  link-message-id: ""
+
+# Veritabanı Ayarları
+database:
+  # Veritabanı tipi (sqlite, mysql)
+  type: "sqlite"
+  # SQLite için dosya adı
+  sqlite-file: "discordlinker.db"
+  # MySQL için ayarlar (sadece type: "mysql" ise kullanılır)
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "discordlinker"
+    username: "root"
+    password: "password"
+
+# Mesaj Ayarları
+messages:
+  prefix: "&8[&bDiscordLinker&8] &7"
+  code-generated: "&aDiscord hesabınızı eşlemek için kod oluşturuldu: &e%code%&a. Bu kodu Discord'da &e#hesap-esle&a kanalındaki buton üzerinden girin."
+  link-success: "&aHesabınız başarıyla Discord hesabınızla eşlendi!"
+  link-already: "&cHesabınız zaten bir Discord hesabıyla eşlenmiş!"
+  link-error: "&cHesap eşleme sırasında bir hata oluştu. Lütfen tekrar deneyin."
+  no-permission: "&cBu komutu kullanmak için yetkiniz yok."
+  reload-success: "&aKonfigürasyon dosyası yeniden yüklendi."
+
+# Genel Ayarlar
+settings:
+  # Kod geçerlilik süresi (saniye)
+  code-expiry: 300
+  # Kod uzunluğu
+  code-length: 5
